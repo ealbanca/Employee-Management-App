@@ -31,7 +31,7 @@ body {
     margin-left: 2rem;
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 9px;
 }
 
 .mainContainer ul {
@@ -106,5 +106,40 @@ body {
 }
 
 .register-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Search Form Styles */
+
+#searchForm,
+.searchForm {
+    display: flex;
+    align-items: center;
+}
+
+#searchForm select,
+#searchForm input[type="text"],
+#searchForm button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: auto;
+}
+
+#searchForm select,
+#searchForm input[type="text"] {
+    width: 36%;
+}
+
+#searchForm button {
+    width: 20%;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+#searchForm button:hover {
     background-color: #0056b3;
 }
