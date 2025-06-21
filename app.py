@@ -66,5 +66,53 @@ def add_employee():
     conn.close()
     return redirect('/')
 
+@app.route('/edit_employee/<int:employee_id>')
+def edit_employee_page(employee_id):
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM employees WHERE employee_id = %s", (employee_id,))
+    employee = cursor.fetchone()
+    cursor.close()
+    conn.close()
+    return render_template('edit_employee.html', employee=employee)
+
+@app.route('/update_employee/<int:employee_id>', methods=['POST'])
+def update_employee(employee_id):
+    name = request.form['name']
+    email = request.form['email']
+    phone = request.form['phone']
+    department = request.form['department']
+    start_date = request.form['startDate']
+    salary = request.form['salary']
+
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor()
+    sql = """
+        UPDATE employees
+        SET name=%s, email=%s, phone=%s, department=%s, start_date=%s, salary=%s
+        WHERE employee_id=%s
+    """
+    values = (name, email, phone, department, start_date, salary, employee_id)
+    cursor.execute(sql, values)
+    conn.commit()
+    cursor.close()
+    conn.close()
+    return redirect('/')
+
+@app.route('/delete_employee/<int:employee_id>', methods=['POST'])
+def delete_employee(employee_id):
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM employees WHERE employee_id = %s", (employee_id,))
+    conn.commit()
+    cursor.close()
+    conn.close()
+    return redirect('/')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
+

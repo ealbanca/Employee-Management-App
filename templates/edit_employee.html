@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Employee</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+</head>
+
+<body>
+    <main>
+        <form method="post" action="{{ url_for('update_employee', employee_id=employee.employee_id) }}"
+            class="register-form">
+            <h1>Edit Employee</h1>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="{{ employee.name }}" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="{{ employee.email }}" required>
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" value="{{ employee.phone }}" required>
+
+            <label for="department">Department</label>
+            <select name="department" id="department">
+                <option value="HR" {% if employee.department=='HR' %}selected{% endif %}>HR</option>
+                <option value="IT" {% if employee.department=='IT' %}selected{% endif %}>IT</option>
+                <option value="Finance" {% if employee.department=='Finance' %}selected{% endif %}>Finance</option>
+                <option value="Marketing" {% if employee.department=='Marketing' %}selected{% endif %}>Marketing
+                </option>
+                <option value="Sales" {% if employee.department=='Sales' %}selected{% endif %}>Sales</option>
+                <option value="Operations" {% if employee.department=='Operations' %}selected{% endif %}>Operations
+                </option>
+            </select>
+
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" name="startDate" value="{{ employee.start_date|safe }}" required>
+
+            <label for="salary">Hour Salary ($)</label>
+            <input type="number" id="salary" name="salary" value="{{ employee.salary }}" step="0.50" required>
+
+            <button type="submit">Update Employee</button>
+        </form>
+    </main>
+</body>
+
+</html>
