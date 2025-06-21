@@ -15,11 +15,11 @@ All employee data is stored in a MySQL database. The app uses HTML templates for
 
 The relational database for this Employee Management App is a MySQL database named employee_db. It contains a main table called employees that stores all employee records.
 
-- id	INT, PRIMARY KEY, AUTO_INCREMENT	Unique internal identifier for each record (optional, if you use it)
+- id	INT, PRIMARY KEY, AUTO_INCREMENT	Unique internal identifier for each record
 - name	VARCHAR	The employee's full name
 - email	VARCHAR	The employee's email address
 - phone	VARCHAR	The employee's phone number
-- employee_id	INT or VARCHAR	The unique employee ID (used for search/edit)
+- employee_id	INT or VARCHAR	The unique employee ID
 - department	VARCHAR	The department the employee belongs to
 - start_date	DATE	The date the employee started
 - salary	DECIMAL/DOUBLE	The employee's hourly salary
