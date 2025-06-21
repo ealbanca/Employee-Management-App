@@ -1,15 +1,17 @@
+# A simple Flask application to manage employee records with MySQL database
 from flask import Flask, render_template, request, redirect
 import mysql.connector
 
 app = Flask(__name__)
-
+# Database configuration
 db_config = {
     'host': 'localhost',
     'user': 'root',
     'password': 'password',
     'database': 'employee_db'
 }
-
+# Route to render the search page
+# Search types and their corresponding database columns
 @app.route('/')
 def index():
     search_type = request.args.get('searchType')
@@ -39,6 +41,8 @@ def index():
     conn.close()
     return render_template('index.html', employees=employees)
 
+# Route to render the search page
+#Add employee page with the matching columns of the database
 @app.route('/addemployee.html')
 def add_employee_page():
     return render_template('addemployee.html')
@@ -52,7 +56,7 @@ def add_employee():
     department = request.form['department']
     start_date = request.form['startDate']
     salary = request.form['salary']
-
+# Connect to the database and insert the new employee record
     conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor()
     sql = """
@@ -66,6 +70,7 @@ def add_employee():
     conn.close()
     return redirect('/')
 
+# Route to edit an employee's details
 @app.route('/edit_employee/<int:employee_id>')
 def edit_employee_page(employee_id):
     conn = mysql.connector.connect(**db_config)
@@ -84,7 +89,7 @@ def update_employee(employee_id):
     department = request.form['department']
     start_date = request.form['startDate']
     salary = request.form['salary']
-
+# Connect to the database and update the employee record
     conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor()
     sql = """
@@ -99,6 +104,7 @@ def update_employee(employee_id):
     conn.close()
     return redirect('/')
 
+# Route to delete an employee record
 @app.route('/delete_employee/<int:employee_id>', methods=['POST'])
 def delete_employee(employee_id):
     conn = mysql.connector.connect(**db_config)
