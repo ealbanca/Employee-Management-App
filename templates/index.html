@@ -11,6 +11,7 @@
 <body>
 
     <main class="mainContainer">
+        <!-- Description of the main page of the employee management app-->
         <h1>Employee Management</h1>
         <p>Welcome to the Employee management App. Please add a new employee or use the search option to look for an
             exisiting
@@ -19,7 +20,9 @@
         <p>If you want to update the employee's details, you can do so after the search results are displayed.</p>
 
         <section>
+            <!-- This button opens the window to add a new employee -->
             <button id="addEmployee" class="right-align">Add Employee</button>
+            <!-- This form is used to search for an employee by different criteria -->
             <form id="searchForm" method="get" action="/">
                 <label for="searchType">Search by:</label>
                 <select name="searchType" id="searchType">
@@ -33,7 +36,7 @@
                 <button type="submit">Search</button>
             </form>
         </section>
-
+        <!-- Table to display list with employee information-->
         {% if employees %}
         <table>
             <tr>
@@ -56,6 +59,7 @@
                 <td>{{ emp.start_date }}</td>
                 <td>{{ emp.salary }}</td>
                 <td>
+                    <!-- edit and delete buttons for each employee-->
                     <a href="{{ url_for('edit_employee_page', employee_id=emp.employee_id) }}" class="edit-btn">Edit</a>
                     <form action="{{ url_for('delete_employee', employee_id=emp.employee_id) }}" method="post"
                         style="display:inline;">

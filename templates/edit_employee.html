@@ -9,6 +9,7 @@
 
 <body>
     <main>
+        <!-- This form is used to edit an existing employee's details including name, email, phone, department, start date, and hourly salary -->
         <form method="post" action="{{ url_for('update_employee', employee_id=employee.employee_id) }}"
             class="register-form">
             <h1>Edit Employee</h1>
