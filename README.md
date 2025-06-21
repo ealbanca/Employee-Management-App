@@ -1,12 +1,12 @@
 # Overview
 
-{This is a simple web application built with Flask and MySQL for managing employee records. The app allows users to:
+This is an employee management web application built with Flask and MySQL for managing employee records. The app allows users to:
 
-Add new employees with details such as name, email, phone, employee ID, department, start date, and hourly salary.
-Search for employees by name, email, phone, employee ID, or department.
-View a list of employees in a table format.
-Edit employee details by clicking the "Edit" button next to an employee’s record.
-Delete employees by clicking the "Delete" button, with a confirmation prompt.
+- Add new employees with details such as name, email, phone, employee ID, department, start date, and hourly salary.
+- Search for employees by name, email, phone, employee ID, or department.
+- View a list of employees in a table format.
+- Edit employee details by clicking the "Edit" button next to an employee’s record.
+- Delete employees by clicking the "Delete" button, with a confirmation prompt.
 All employee data is stored in a MySQL database. The app uses HTML templates for the user interface and supports basic CRUD (Create, Read, Update, Delete) operations for employee management.}
 
 [Software Demo Video](http://youtube.link.goes.here)
