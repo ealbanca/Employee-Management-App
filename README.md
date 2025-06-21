@@ -40,9 +40,9 @@ The relational database for this Employee Management App is a MySQL database nam
 
 # Development Environment
 
-Frontend (HTML, CSS, and JavaScript)
-Backend (Python - using Flask as the web framework)
-Database (SQL - using a relational database MySQL)
+- Frontend (HTML, CSS, and JavaScript)
+- Backend (Python - using Flask as the web framework)
+- Database (SQL - using a relational database MySQL)
 
 # Useful Websites
 
