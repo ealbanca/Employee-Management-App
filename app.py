@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect
 import mysql.connector
 
 app = Flask(__name__)
-# Database configuration
+# Database configuration- Update it with the local MySQL database credentials
 db_config = {
     'host': 'localhost',
     'user': 'root',
