@@ -26,15 +26,15 @@ The relational database for this Employee Management App is a MySQL database nam
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
+Frontend (HTML, CSS, and JavaScript)
+Backend (Python - using Flask as the web framework)
+Database (SQL - using a relational database MySQL)
 
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
 
-- [Web Site Name](http://url.link.goes.here)
+- [Pallets Projects]([http://url.link.goes.here](https://flask.palletsprojects.com/en/stable/))
 - [Web Site Name](http://url.link.goes.here)
 
 # Future Work
