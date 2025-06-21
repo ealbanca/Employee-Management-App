@@ -28,39 +28,14 @@ body {
 }
 
 .mainContainer p {
-    margin-left: 2rem;
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 9px;
 }
 
-.mainContainer ul {
-    padding: 0;
-    margin: 20px 0;
-    margin-left: 3.2rem;
+.right-align {
+    float: right;
+    margin-bottom: 10px;
 }
-
-
-.buttonsContainer {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.buttonsContainer button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.buttonsContainer button:hover {
-    background-color: #0056b3;
-}
-
 
 /*Register Form Styles*/
 
@@ -114,6 +89,8 @@ body {
 
 #searchForm,
 .searchForm {
+    margin-top: 2rem;
+    ;
     display: flex;
     align-items: center;
 }
@@ -131,18 +108,36 @@ body {
 
 #searchForm select,
 #searchForm input[type="text"] {
-    width: 36%;
+    width: 23%;
 }
 
 #searchForm button {
-    width: 20%;
-    background-color: #007bff;
+    width: 22%;
+    background-color: #0074D9;
     color: #fff;
     cursor: pointer;
+    margin-left: 1rem;
+    margin-right: 17rem;
 }
 
-#searchForm button:hover {
+#searchForm button:hover,
+#addEmployee:hover {
     background-color: #0056b3;
+}
+
+#addEmployee {
+    display: block;
+    text-align: center;
+    width: 180px;
+    margin: 0 auto 16px auto;
+    padding: 10px 20px;
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
 /* Search Results Styles */

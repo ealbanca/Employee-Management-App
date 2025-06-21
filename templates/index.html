@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Employee</title>
+    <title>Employee Management</title>
     <link rel="stylesheet" href="/static/styles/style.css">
 </head>
 
 <body>
 
     <main class="mainContainer">
-        <h1>Search Employee</h1>
-        <p>Select the type of search you want to do. The system will display the employee's
+        <h1>Employee Management</h1>
+        <p>Welcome to the Employee management App. Please add an user or use the search area to look for an exisiting
+            employee. Select the type of search you want to do. The system will display the employee's
             details if found.</p>
         <p>If you want to update the employee's details, you can do so after the search results are displayed.</p>
+
         <section>
-            <form id="searchForm" method="get" action="/search">
+            <button id="addEmployee" class="right-align">Add Employee</button>
+            <form id="searchForm" method="get" action="/">
                 <label for="searchType">Search by:</label>
                 <select name="searchType" id="searchType">
                     <option value="name">Name</option>
@@ -57,6 +60,7 @@
         <p>No employees found.</p>
         {% endif %}
     </main>
+    <script src="{{ url_for('static', filename='scripts/addEmployee.js') }}"></script>
 </body>
 
 </html>
