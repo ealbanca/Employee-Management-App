@@ -1,12 +1,13 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+{This is a simple web application built with Flask and MySQL for managing employee records. The app allows users to:
 
-{Provide a description of the software that you wrote and how it integrates with a SQL Relational Database. Describe how to use your program.}
-
-{Describe your purpose for writing this software.}
-
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of how created the Relational Database.}
+Add new employees with details such as name, email, phone, employee ID, department, start date, and hourly salary.
+Search for employees by name, email, phone, employee ID, or department.
+View a list of employees in a table format.
+Edit employee details by clicking the "Edit" button next to an employee’s record.
+Delete employees by clicking the "Delete" button, with a confirmation prompt.
+All employee data is stored in a MySQL database. The app uses HTML templates for the user interface and supports basic CRUD (Create, Read, Update, Delete) operations for employee management.}
 
 [Software Demo Video](http://youtube.link.goes.here)
 
