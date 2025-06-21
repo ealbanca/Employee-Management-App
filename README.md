@@ -36,11 +36,3 @@ Database (SQL - using a relational database MySQL)
 
 - [Pallets Projects](http://url.link.goes.here](https://flask.palletsprojects.com/en/stable/ )
 - [Geeks for Geeks](https://www.geeksforgeeks.org/python/flask-tutorial/)
-
-# Future Work
-
-{Make a list of things that you need to fix, improve, and add in the future.}
-
-- Item 1
-- Item 2
-- Item 3
