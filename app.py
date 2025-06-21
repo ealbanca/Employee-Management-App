@@ -20,7 +20,7 @@ def add_employee():
     name = request.form['name']
     email = request.form['email']
     phone = request.form['phone']
-    employee_Id = request.form['employeeId']
+    employee_Id = int(request.form['employeeId'])
     department = request.form['department']
     start_date = request.form['startDate']
     salary = request.form['salary']
