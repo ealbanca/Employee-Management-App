@@ -1,16 +1,19 @@
 import mysql.connector
 
-# Replace with your MySQL credentials
+# Connect to MySQL
 conn = mysql.connector.connect(
     host="localhost",
-    user="your_mysql_username",
-    password="your_mysql_password",
-    database="employee_db"  # Use the database you created
+    user="root",      # <-- replace with your MySQL username
+    password="password",  # <-- replace with your MySQL password
+    database="employee_db"           # <-- replace with your database name
 )
 
-if conn.is_connected():
-    print("Connection successful!")
-else:
-    print("Connection failed.")
+# Create a cursor to execute SQL queries
+cursor = conn.cursor()
 
+# Example: Check connection
+print("Connected to MySQL database!")
+
+# Don't forget to close the connection when done
+cursor.close()
 conn.close()

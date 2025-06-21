@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Employee</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
 </head>
 
 <body>
     <main>
         <!-- This form is used to add a new employee including name, email, phone, department, starting date and Hour salary -->
-        <form method="get" action="" class="register-form">
+        <form method="post" action="/add_employee" class="register-form">
             <h1>Add Employee</h1>
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
