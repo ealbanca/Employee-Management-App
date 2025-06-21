@@ -7,7 +7,26 @@ This is an employee management web application built with Flask and MySQL for ma
 - View a list of employees in a table format.
 - Edit employee details by clicking the "Edit" button next to an employee’s record.
 - Delete employees by clicking the "Delete" button, with a confirmation prompt.
-All employee data is stored in a MySQL database. The app uses HTML templates for the user interface and supports basic CRUD (Create, Read, Update, Delete) operations for employee management.}
+All employee data is stored in a MySQL database. The app uses HTML templates for the user interface and supports basic CRUD (Create, Read, Update, Delete) operations for employee management.
+Since this uses a local database, please Run these commands to create the local database and table in MySQL (Don't forget to update the db configuration user and password on the app.py file) :
+-- Create the database
+  
+CREATE DATABASE employee_db;
+
+-- Use the new database
+USE employee_db;
+
+-- Create the employees table
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    employee_id INT NOT NULL UNIQUE,
+    department VARCHAR(50) NOT NULL,
+    start_date DATE NOT NULL,
+    salary DECIMAL(10,2) NOT NULL
+);
 
 [Software Demo Video](http://youtube.link.goes.here)
 
