@@ -51,7 +51,6 @@ def search_employee():
     if search_type and search_value:
         conn = mysql.connector.connect(**db_config)
         cursor = conn.cursor(dictionary=True)
-        # Map form field to actual column name
         column_map = {
             'name': 'name',
             'email': 'email',
@@ -65,4 +64,13 @@ def search_employee():
         employees = cursor.fetchall()
         cursor.close()
         conn.close()
+    elif not search_type and not search_value:
+        conn = mysql.connector.connect(**db_config)
+        cursor = conn.cursor(dictionary=True)
+        cursor.execute("SELECT * FROM employees")
+        employees = cursor.fetchall()
+        cursor.close()
+        conn.close()
+
     return render_template('searchemployee.html', employees=employees)
+
