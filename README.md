@@ -37,3 +37,4 @@ The relational database for this Employee Management App is a MySQL database nam
 
 - [Pallets Projects](http://url.link.goes.here](https://flask.palletsprojects.com/en/stable/ )
 - [Geeks for Geeks](https://www.geeksforgeeks.org/python/flask-tutorial/)
+- [How to connect MySQL Database with Flask Tutorial](https://www.youtube.com/watch?v=14HTiBQEQ9M)
