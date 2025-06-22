@@ -10,7 +10,7 @@ This is an employee management web application built with Flask and MySQL for ma
 All employee data is stored in a MySQL database. The app uses HTML templates for the user interface and supports basic features like Create, Read, Update, and Delete operations for employee management.
 Since this uses a local database, please Run the createTable.py file (Don't forget to update the database configuration user and password on the cretaeTable.py and app.py file with your local credentials).
 
-[Demo Video](http://youtube.link.goes.here](https://youtu.be/O5D6bLyjQjw)
+[Demo Video](http://youtube.link.goes.here](https://youtu.be/O5D6bLyjQjw )
 
 # Relational Database
 
